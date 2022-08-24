@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 
 const loginRoutes: Routes =[
   {path:'', component:LoginComponent, children:[
+    // {path:'', component: LoginComponent}
   ]}
 ]
 
@@ -21,3 +22,6 @@ const loginRoutes: Routes =[
   ]
 })
 export class LoginModule { }
+
+
+

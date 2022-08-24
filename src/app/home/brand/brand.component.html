@@ -1,3 +1,26 @@
+<div id="breadcrumb" class="text-left">
+  <nz-breadcrumb>
+    <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+    <nz-breadcrumb-item>
+      <a>View List Brand</a>
+    </nz-breadcrumb-item>
+  </nz-breadcrumb>
+</div>
+<hr>
+<div class="d-flex justify-content-between">
+<div class="float-left">
+  <h3>List Brand</h3>
+</div>
+<form class="float-right">
+  <nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+    <input style="width: 200px;" type="text" nz-input placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixButton>
+    <button nz-button nzType="primary" nzSearch>Search</button>
+  </ng-template>
+</form>
+</div>
+
 <nz-table #basicTable [nzData]="listOfData">
     <thead>
       <tr>

@@ -2,27 +2,47 @@
     <nz-sider>
         <div class="logo"></div>
         <ul nz-menu nzTheme="dark" nzMode="inline">
-            <li nz-submenu nzTitle="User" nzIcon="user">
+            <li nz-submenu nzTitle="Franchisor" nzIcon="user">
                 <ul>
-                    <li nz-menu-item>Tom</li>
-                    <li nz-menu-item>Bill</li>
-                    <li nz-menu-item>Alex</li>
+                    <li nz-menu-item>
+                        <i nz-icon nzType="solution" nzTheme="outline"></i>
+                        <span>
+                            <a routerLink="/home/user">View List Franchisor</a>
+                        </span>
+                    </li>
+                    <li nz-menu-item>
+                        <i nz-icon nzType="plus-circle" nzTheme="outline"></i>
+                        <span>
+                            <a routerLink="/home/create-user">Create Franchisor</a>
+                        </span>
+                    </li>
+
                 </ul>
             </li>
-            <li nz-submenu nzTitle="Brand" nzIcon="team">
+            <li nz-submenu nzTitle="Brand" nzIcon="bold">
                 <ul>
-                    <li nz-menu-item>Team 1</li>
-                    <li nz-menu-item>Team 2</li>
+                    <li nz-menu-item>
+                        <i nz-icon nzType="file-text" nzTheme="outline"></i>
+                        <span>
+                            <a routerLink="/home/brand">View List Brand</a>
+                        </span>
+                    </li>
+                    <li nz-menu-item>
+                        <i nz-icon nzType="plus-circle" nzTheme="outline"></i>
+                        <span>
+                            <a routerLink="/home/create-brand">Create Brand</a>
+                        </span>
+                    </li>
                 </ul>
             </li>
-            <li nz-menu-item (click)="showDeleteConfirm()">
+            <li style="color: red;" nz-menu-item (click)="showDeleteConfirm()">
                 <i nz-icon nzType="logout" nzTheme="outline"></i>
                 <span>Logout</span>
             </li>
         </ul>
     </nz-sider>
     <nz-layout class="right-layout">
-        <nz-header>
+        <!-- <nz-header>
             <div id="breadcrumb">
                 <nz-breadcrumb>
                     <nz-breadcrumb-item>Home</nz-breadcrumb-item>
@@ -32,7 +52,10 @@
                     <nz-breadcrumb-item>An Application</nz-breadcrumb-item>
                 </nz-breadcrumb>
             </div>
-        </nz-header>
+            <div class="text-center">
+                <h2 class="mt-3">Admin Web of PnL System</h2>
+            </div>
+        </nz-header> -->
         <nz-content>
             <div class="inner-content">
 
