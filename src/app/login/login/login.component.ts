@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IsLoginGuard } from 'src/app/_core/guards/is-login.guard';
 import { AuthService } from 'src/app/_core/service/auth/auth.service';
 
 @Component({
@@ -25,7 +26,11 @@ export class LoginComponent implements OnInit {
       alert("password is empty");
     }
 
-    this.auth.login(this.email, this.password)
+    
+
+    if(IsLoginGuard){
+      this.auth.login(this.email, this.password)
+    }
 
   }
 }

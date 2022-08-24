@@ -1,24 +1,45 @@
-<nz-table #basicTable [nzData]="listOfData">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Address</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of basicTable.data">
-        <td>{{ data.name }}</td>
-        <td>{{ data.age }}</td>
-        <td>{{ data.address }}</td>
-        <td>
-            <button nz-button nzType="primary" class="success-button">update</button>
-          <nz-divider nzType="vertical"></nz-divider>
-          <button nz-button nzType="primary" nzDanger>Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </nz-table>
 
-  
+  <div id="breadcrumb" class="text-left">
+    <nz-breadcrumb>
+      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a>View List Franchisor</a>
+      </nz-breadcrumb-item>
+    </nz-breadcrumb>
+  </div>
+  <hr>
+<div class="d-flex justify-content-between">
+  <div class="float-left">
+    <h3>List Franchisor</h3>
+  </div>
+  <form class="float-right">
+    <nz-input-group nzSearch [nzAddOnAfter]="suffixButton">
+      <input style="width: 200px;" type="text" nz-input placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixButton>
+      <button nz-button nzType="primary" nzSearch>Search</button>
+    </ng-template>
+  </form>
+</div>
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data.name }}</td>
+      <td>{{ data.age }}</td>
+      <td>{{ data.address }}</td>
+      <td>
+        <button nz-button nzType="primary" class="success-button">update</button>
+        <nz-divider nzType="vertical"></nz-divider>
+        <button nz-button nzType="primary" nzDanger>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
